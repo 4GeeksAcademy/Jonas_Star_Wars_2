@@ -1,0 +1,18 @@
+.custom-link {
+    text-decoration: none;
+    color: black;
+}
+
+
+.main-body {
+    background-color: rgb(60, 60, 60);
+    color: rgb(255, 190, 10);
+
+}
+
+.btn-favorite {
+    background-color: rgb(60, 60, 60);
+    color: rgb(255, 190, 10);
+    border-radius: 5px;
+    font-weight: bold;
+}
