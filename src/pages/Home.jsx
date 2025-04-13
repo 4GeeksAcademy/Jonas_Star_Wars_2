@@ -1,42 +1,64 @@
+import { useState } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 
 export const Home = () => {
 
   const {store, dispatch} =useGlobalReducer()
 
-	return (
-		<div className="card-body text-left mt-1 main-body">
-			<div className="mb-1">
-				<h5>Personajes</h5>
+  const [isFav, setIsFav] = useState(false);
+  const toggleFav = () => setIsFav(!isFav);
 
+	return (
+		
+		<div className="container-fluid text-left mt-1 main-body-color">
+			
+			{/* FILA DE TARJETAS */}
+			<div className="mb-3 p-2">
+				<h5>Characters</h5>
+
+							
 				<div className="d-flex flex-wrap gap-2">
-					<div className="card" style={{ width: "18rem" }}>
+					
+					{/* TARJETAS TIPO*/}
+					<div className="card card-tipo">
 						<img
-							src="https://picsum.photos/300/200?random=1"
-							className="card-img-top"
+							src="https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg"
+							className="card-img-top fixed-img"
 							alt="Imagen aleatoria"
 						/>
 						<div className="card-body">
 							<h5 className="card-title">Luke Skywalker</h5>
-							<p className="card-text">Gender: male</p>
-							<p className="card-text">Hair: blonde</p>
-							<p className="card-text">Eye-Color: blue</p>
-							<a href="#" className="btn btn-primary">
-							Learn more!
-							</a>
-							<button className="btn btn-primary">Fav</button>
+							<p className="card-text mb-1"><span className="field">Gender: </span>male</p>
+							<p className="card-text mb-1"><span className="field">Hair Color: </span>blonde</p>
+							<p className="card-text mb-3"><span className="field">Eye-Color: </span>blue</p>
+
+							<div className="d-flex mt-2">
+								<div className="profile-btn">
+									<a href="#" className="btn btn-secondary">
+									Profile
+									</a>
+								</div>
+								<div className="fav-button d-flex ms-auto">
+								<button
+                  					className={`btn ${isFav ? "btn-warning" : "btn-secondary"}`}
+                  					onClick={toggleFav}
+                				>
+									<i className="fa-solid fa-heart"></i>
+								</button>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<div className="card p-2">Personaje 2</div>
 					<div className="card p-2">Personaje 3</div>
 					<div className="card p-2">Personaje 4</div>
-				</div>
+				</div> {/* FIN DE FILA DE TARJETAS */}
 			</div>
 
 
-			<div className="mb-1">
-				<h5>Vehículos</h5>
+			<div className="mb-3 p-2">
+				<h5>Vehicles</h5>
 				<div className="d-flex flex-wrap gap-2">
 					<div className="card p-2">Vehículo 1</div>
 					<div className="card p-2">Vehículo 2</div>
@@ -45,8 +67,8 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<div className="mb-1">
-				<h5>Planetas</h5>
+			<div className="mb-1 p-2">
+				<h5>Planets</h5>
 				<div className="d-flex flex-wrap gap-2">
 					<div className="card p-2">Planeta 1</div>
 					<div className="card p-2">Planeta 2</div>

@@ -1,18 +1,79 @@
+ {
+    border: dashed rgb(185, 124, 243) 1px;
+}
+
+html, body {
+    background-color: aqua;
+    background: linear-gradient(to right, aqua, rgb(255, 190, 10));
+}
+
 .custom-link {
     text-decoration: none;
     color: black;
 }
 
+.navbar-bg {
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgb(60, 60, 60, 100)), 
+    url("assets/img/fondo-hiperespacial.avif");
+    background-size: cover;     /* Que cubra todo el espacio */
+    background-position: top;
+    background-repeat: no-repeat;
+  }
 
-.main-body {
-    background-color: rgb(60, 60, 60);
+.nav-color {
+    background-color: transparent;
     color: rgb(255, 190, 10);
-
 }
 
-.btn-favorite {
+.main-body-color {
     background-color: rgb(60, 60, 60);
     color: rgb(255, 190, 10);
+}
+
+.btn-favorite-list {
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+
+.card {
+    background-color: rgb(60, 60, 60);
+    color: white;
+    border-color: white;
+}
+
+.card-tipo {
+    width: 18rem; 
+    transform: scale(0.8);
+    transform-origin: top left;
+}
+
+.fixed-img {
+    width: 286px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.field {
+    color: rgb(190, 154, 231);
+}
+
+.profile-btn {
+    color: black;
+}
+
+.fav-button {
+    background-color: rgb(117, 128, 133);
     border-radius: 5px;
-    font-weight: bold;
+}
+
+.btn-no-fav {
+    background-color: rgb(127, 129, 129);
+    color: ;
+}
+
+.fa-heart {
+    color: rgb(60, 60, 60);;
+    font-size: 20px;
 }

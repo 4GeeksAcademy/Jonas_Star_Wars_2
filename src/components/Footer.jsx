@@ -1,5 +1,5 @@
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center main-body">
+	<footer className="footer mt-auto py-3 text-center main-body-color">
 		<p>
 			Visita <a target="_blank" href="https://github.com/4GeeksAcademy/Jonas_Star_Wars" class="custom-link">el respositorio</a> <i class="fa-solid fa-file"></i>.
 		</p>
