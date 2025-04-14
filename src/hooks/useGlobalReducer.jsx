@@ -8,6 +8,7 @@ const StoreContext = createContext()
 
 // Define a provider component that encapsulates the store and warps it in a context provider to 
 // broadcast the information throught all the app pages and components.
+
 export function StoreProvider({ children }) {
     // Initialize reducer with the initial state.
     const [store, dispatch] = useReducer(storeReducer, initialStore())
