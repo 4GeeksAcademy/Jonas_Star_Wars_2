@@ -3,13 +3,12 @@
 }
 
 html, body {
-    background-color: aqua;
     background: linear-gradient(to right, aqua, rgb(255, 190, 10));
 }
 
 .custom-link {
     text-decoration: none;
-    color: black;
+    color: gold;
 }
 
 .navbar-bg {
@@ -74,6 +73,10 @@ html, body {
 }
 
 .fa-heart {
-    color: rgb(60, 60, 60);;
+    color: rgb(184, 49, 49);
     font-size: 20px;
+}
+
+.attributes {
+    color: gold;
 }

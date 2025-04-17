@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { Card } from "../components/Card.jsx";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 
 
 export const Home = () => {
 	const {store, dispatch} = useGlobalReducer()
-	console.log ("charactes desde el Home", store.characters);
+
 
 	return(
 		<div className="container-fluid">
@@ -16,7 +15,37 @@ export const Home = () => {
 					{
 						store.characters.map(character => {
 							return (
-								<Card key={character.uid} data={character}/>   
+								<Card key={character.uid} data={character} type="characters"/>   
+
+							)
+						})
+					}
+
+				</div>
+			</div>
+
+			<div className="container-characters mt-4">
+				<h2>Planets</h2>
+				<div className="container-scroll d-flex overflow-x-scroll">
+					{
+						store.planets.map(planet => {
+							return (
+								<Card key={planet.uid} data={planet} type="planets"/>   
+
+							)
+						})
+					}
+
+				</div>
+			</div>
+
+			<div className="container-characters mt-4">
+				<h2>Vehicles</h2>
+				<div className="container-scroll d-flex overflow-x-scroll">
+					{
+						store.vehicles.map(vehicle => {
+							return (
+								<Card key={vehicle.uid} data={vehicle} type="vehicles"/>   
 
 							)
 						})
@@ -26,6 +55,8 @@ export const Home = () => {
 			</div>
 
 		</div>
+
+		
 
 	);
 };
