@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getCharacter } from "../services/APIservices"
+import { getVehicle } from "../services/APIservices"
 import { Link } from "react-router-dom"
 import useGlobalReducer from "../hooks/useGlobalReducer"
 
-export const CharacterDetail = () => {
+export const VehicleDetail = () => {
 
     const params = useParams()
     const [data, setData] = useState({})
@@ -12,7 +12,7 @@ export const CharacterDetail = () => {
     const isFavorite = store.favorites.includes(data.name);
 
     useEffect(() => {
-        getCharacter(params.uid, setData)
+        getVehicle(params.uid, setData)
     }, [params.uid]
 
     )
@@ -22,7 +22,7 @@ export const CharacterDetail = () => {
             <div className="card d-flex justify-content-center p-3" style={{ maxHeight: "85vh", maxWidth: "380px", width: "100%" }}>
                 <div className="card col-12">
                     
-                    <img  src={`https://github.com/tbone849/star-wars-guide/blob/master/build/assets/img/characters/${params.uid}.jpg?raw=true`} 
+                    <img  src={`https://github.com/tbone849/star-wars-guide/blob/master/build/assets/img/vehicles/${params.uid}.jpg?raw=true`} 
                     alt="" 
                     className="p-3"
                     />

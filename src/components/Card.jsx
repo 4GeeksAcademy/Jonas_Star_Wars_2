@@ -1,9 +1,13 @@
 
 import { Link } from "react-router-dom"
+import useGlobalReducer from "../hooks/useGlobalReducer"
+
 
 export const Card = ({data, type}) => {
+const {store, dispatch} = useGlobalReducer()
+const isFavorite = store.favorites.includes(data.name);
 
-    return (
+return (
         <div className="col-md-3 col-lg-2">
 
             <div className="card m-1">
@@ -18,9 +22,15 @@ export const Card = ({data, type}) => {
                     </button>
                     </Link>
 
-                    <button className="btn btn-outline-danger d-flex ms-auto">
-                        <i className="fas fa-heart"></i>
-                    </button>                   
+
+                    <button 
+                        className={`btn ms-auto ${isFavorite ? 'btn-danger' : 'btn-outline-danger'} d-flex`} 
+                        onClick={() => dispatch({type: 'handle_favorites', payload: data.name})}
+                    >
+                        <i className={store.favorites.includes(data.name) ? "fas fa-heart" : "far fa-heart"}></i>
+
+                    </button>
+                  
                     </div>
                     
                            

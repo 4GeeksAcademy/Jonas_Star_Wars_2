@@ -4,6 +4,7 @@
 
 html, body {
     background: linear-gradient(to right, aqua, rgb(255, 190, 10));
+
 }
 
 .custom-link {
@@ -24,6 +25,21 @@ html, body {
     background-color: transparent;
     color: rgb(255, 190, 10);
 }
+
+/* Permite mantener el hover en el dropdown completo */
+.dropdown.show-on-hover {
+    position: relative;
+  }
+  
+  .dropdown.show-on-hover .dropdown-menu {
+    display: none;
+    position: absolute;
+  }
+  
+  .dropdown.show-on-hover:hover .dropdown-menu {
+    display: block;
+  }
+  
 
 .main-body-color {
     background-color: rgb(60, 60, 60);
@@ -79,4 +95,8 @@ html, body {
 
 .attributes {
     color: gold;
+}
+
+.card-image {
+    transform: scale(0.8);
 }
