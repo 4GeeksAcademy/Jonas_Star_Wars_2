@@ -6,15 +6,15 @@ export const Navbar = () => {
 const { store, dispatch } = useGlobalReducer()
 
 	return (
-		<nav className="navbar navbar-light nav-color navbar-bg">
+		<nav className="navbar navbar-light nav-color navbar-bg py-4">
 			<div className="container-fluid p-2 mb-1">
 				<Link to="/" className="custom-link">
-					<span className="mb-0 h2 nav-color">Star Wars</span>
+					<span className="h1 nav-color p-2">Star Wars</span>
 				</Link>
 				
 				<div class="dropdown">
 					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Favorites
+						Favorites ({store.favorites.length})
 					</button>
 					<ul className="dropdown-menu dropdown-menu-end">
 						{store.favorites.length === 0 ? (

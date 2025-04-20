@@ -9,8 +9,8 @@ export const Home = () => {
 	return(
 		<div className="container-fluid">
 
-			<div className="container-characters mt-4">
-				<h2>Characters</h2>
+			<div className="container-cards mt-4">
+				<h2 className="p-2">Characters</h2>
 				<div className="container-scroll d-flex overflow-x-scroll">
 					{
 						store.characters.map(character => {
@@ -24,8 +24,8 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<div className="container-characters mt-4">
-				<h2>Planets</h2>
+			<div className="container-cards mt-4">
+				<h2 className="p-2">Planets</h2>
 				<div className="container-scroll d-flex overflow-x-scroll">
 					{
 						store.planets.map(planet => {
@@ -39,8 +39,8 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<div className="container-characters mt-4">
-				<h2>Vehicles</h2>
+			<div className="container-cards mt-4">
+				<h2 className="p-2">Vehicles</h2>
 				<div className="container-scroll d-flex overflow-x-scroll">
 					{
 						store.vehicles.map(vehicle => {

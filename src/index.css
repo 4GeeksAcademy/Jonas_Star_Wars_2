@@ -1,15 +1,15 @@
- {
-    border: dashed rgb(185, 124, 243) 1px;
-}
-
 html, body {
     background: linear-gradient(to right, aqua, rgb(255, 190, 10));
-
 }
 
 .custom-link {
     text-decoration: none;
-    color: gold;
+    color: rgb(255, 190, 10);
+}
+
+.custom-link:hover {
+    text-decoration: none;
+    color: aqua;
 }
 
 .navbar-bg {
@@ -19,31 +19,21 @@ html, body {
     background-size: cover;     /* Que cubra todo el espacio */
     background-position: top;
     background-repeat: no-repeat;
-  }
+}
 
 .nav-color {
     background-color: transparent;
     color: rgb(255, 190, 10);
 }
 
-/* Permite mantener el hover en el dropdown completo */
-.dropdown.show-on-hover {
-    position: relative;
-  }
-  
-  .dropdown.show-on-hover .dropdown-menu {
-    display: none;
-    position: absolute;
-  }
-  
-  .dropdown.show-on-hover:hover .dropdown-menu {
-    display: block;
-  }
-  
 
 .main-body-color {
     background-color: rgb(60, 60, 60);
     color: rgb(255, 190, 10);
+}
+
+.container-cards {
+    color: rgb(60, 60, 60) ;
 }
 
 .btn-favorite-list {
@@ -57,46 +47,24 @@ html, body {
     border-color: white;
 }
 
-.card-tipo {
-    width: 18rem; 
-    transform: scale(0.8);
-    transform-origin: top left;
-}
-
-.fixed-img {
-    width: 286px;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-  }
-
-.field {
-    color: rgb(190, 154, 231);
-}
-
-.profile-btn {
-    color: black;
-}
-
-.fav-button {
-    background-color: rgb(117, 128, 133);
-    border-radius: 5px;
-}
-
-.btn-no-fav {
-    background-color: rgb(127, 129, 129);
-    color: ;
-}
-
 .fa-heart {
-    color: rgb(184, 49, 49);
+    color: rgb(255, 190, 10);
     font-size: 20px;
 }
 
 .attributes {
-    color: gold;
+    color: rgb(255, 190, 10);
 }
 
 .card-image {
     transform: scale(0.8);
 }
+
+.footer{
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgb(60, 60, 60, 100)), 
+    url("assets/img/fondo-hiperespacial.avif");
+    background-size: cover;     /* Que cubra todo el espacio */
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }

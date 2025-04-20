@@ -18,13 +18,13 @@ return (
                     <div className="d-flex">
                     <Link to={`/${type}/${data.uid}`}>
                     <button className="btn btn-secondary">
-                        Ver más...
+                        See more...
                     </button>
                     </Link>
 
 
                     <button 
-                        className={`btn ms-auto ${isFavorite ? 'btn-danger' : 'btn-outline-danger'} d-flex`} 
+                        className={`btn ms-auto ${isFavorite ? 'btn-outline-secondary' : 'btn-outline-secondary'} d-flex`} 
                         onClick={() => dispatch({type: 'handle_favorites', payload: data.name})}
                     >
                         <i className={store.favorites.includes(data.name) ? "fas fa-heart" : "far fa-heart"}></i>

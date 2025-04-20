@@ -29,10 +29,10 @@ export const PlanetDetail = () => {
                     
                     <div className="card-body">
                         <h1 className="card-title">{data.name}</h1>
-                        <p className="mb-1 mt-2"><span className="attributes">Gender: </span> <strong>{data.gender}</strong></p>
-                        <p className="mb-1"> <span className="attributes">Hair Color: </span> <strong>{data.hair_color}</strong> </p>
-                        <p className="mb-1"> <span className="attributes">Height (cm): </span> <strong>{data.height}</strong> </p>
-                        <p className="mb-1"> <span className="attributes">Eye Color: </span> <strong>{data.eye_color}</strong> </p>        
+                        <p className="mb-1 mt-2"><span className="attributes">Diameter: </span> <strong>{data.diameter}</strong></p>
+                        <p className="mb-1"> <span className="attributes">Climate: </span> <strong>{data.climate}</strong> </p>
+                        <p className="mb-1"> <span className="attributes">Terrain: </span> <strong>{data.terrain}</strong> </p>
+                        <p className="mb-1"> <span className="attributes">Population: </span> <strong>{data.population}</strong> </p>        
                         
                         <div className="d-flex mt-4">
                             <Link to={`/`}>
@@ -42,7 +42,7 @@ export const PlanetDetail = () => {
                             </Link>    
                             
                             <button 
-                                className={`btn ms-auto ${isFavorite ? 'btn-danger' : 'btn-outline-danger'}`} 
+                                className={`btn ms-auto ${isFavorite ? 'btn-outline-secondary' : 'btn-outline-secondary'}`} 
                                 onClick={() => dispatch({type: 'handle_favorites', payload: data.name})}
                             >
                                 <i className={store.favorites.includes(data.name) ? "fas fa-heart" : "far fa-heart"}></i>

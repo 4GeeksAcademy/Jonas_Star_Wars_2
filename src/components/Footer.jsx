@@ -1,7 +1,7 @@
 export const Footer = () => (
-	<footer className="footer mt-auto py-4 text-center main-body-color">
+	<footer className="footer mt-auto py-5 text-center main-body-color">
 		<p>
-			Check out <a target="_blank" href="https://github.com/4GeeksAcademy/Jonas_Star_Wars_2" class="custom-link">this repository</a> <i class="fa-solid fa-file"></i>.
+			Check the <a target="_blank" href="https://github.com/4GeeksAcademy/Jonas_Star_Wars_2" class="custom-link">repository</a> <i class="fa-solid fa-file"></i>.
 		</p>
 		<p>
 			Made by{" "}
